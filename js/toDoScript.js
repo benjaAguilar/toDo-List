@@ -48,14 +48,27 @@ $(document).ready(function(){
 
     $("#title-button").click(function(){
         let userTitle = $("#title").val();
-        noteTitle.text(userTitle);
+
+        if(userTitle === ""){
+            console.log("input empty");
+
+        }else{
+            noteTitle.text(userTitle);
+
+        }
     });
 
     $("#content-button").click(function(){
         let userContent = $("#note-content").val();
-        noteData.append("<li>" + userContent + "</li>");
 
-        $("#note-content").val("");
+        if(userContent === ""){
+            console.log("input empty");
+
+        }else{
+            noteData.append("<li>" + userContent + "</li>");
+            $("#note-content").val("");
+
+        }
     });
 
     $(".button-done").click(function(){
