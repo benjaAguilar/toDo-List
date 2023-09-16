@@ -28,6 +28,7 @@ $(document).ready(function(){
             $(".notes-section").append(note);
 
         }else{
+            $("#warning").css("display", "none");
             newNoteSection.css("display", "none");
             newNoteClick = false;
 
