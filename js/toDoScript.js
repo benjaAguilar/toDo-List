@@ -17,19 +17,21 @@ $(document).ready(function(){
         noteData = $("<ul>").addClass("note-info");
 
         if(newNoteClick === false){
-            newNoteSection.css("display", "flex");
+            newNoteSection.slideDown();
             newNoteClick = true;
             notesIndex = notesIndex + 1;
 
             note.attr("id", notesIndex);
             note.append(noteTitle);
             note.append(noteData);
-        
+            note.css("display", "none");
+
             $(".notes-section").append(note);
+            note.slideDown();
 
         }else{
             $("#warning").css("display", "none");
-            newNoteSection.css("display", "none");
+            newNoteSection.slideUp();
             newNoteClick = false;
 
             if($("#" + notesIndex + " ul").is(':empty')){
