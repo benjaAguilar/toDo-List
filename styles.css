@@ -86,6 +86,37 @@ header{
     box-shadow: 0px 0px 3px #333;
 }
 
+.new-note{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.input-part{
+    display: flex;
+    margin-bottom: 20px;
+    gap: 5px;
+    flex: 1 1 auto;
+    max-width: 100%;
+    gap: 10px;
+}
+
+.note-edits{
+    flex: auto;
+    width: 150px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid #333;
+}
+
+.note-edits:focus{
+   outline: none;
+   border-bottom: 2px solid #333;
+}
+
 .notes-section{
     display: flex;
     flex: auto;
@@ -93,6 +124,29 @@ header{
     align-items: center;
     background-color: whitesmoke;
     z-index: 1;
+}
+
+.button-add,
+.button-done{
+    background-color: whitesmoke;
+    outline: none;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 8px;
+    transition: all 300ms;
+}
+
+.button-add:hover,
+.button-done:hover{
+    cursor: pointer;
+    background-color: #ccc;
+    box-shadow: 0px 0px 3px #333;
+}
+
+.button-done{
+    align-self: center;
+    width: 100%;
 }
 
 .note{
