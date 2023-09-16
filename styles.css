@@ -111,3 +111,9 @@ header{
     list-style: disc;
     margin: 5px;
 }
+
+.note-title{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;    
+}
