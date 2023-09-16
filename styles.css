@@ -149,6 +149,14 @@ header{
     width: 100%;
 }
 
+#warning{
+    color: red;
+    font-weight: bold;
+    align-self: center;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
 .note{
     display: flex;
     flex-direction: column;

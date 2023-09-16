@@ -49,4 +49,18 @@ $(document).ready(function(){
         let userContent = $("#note-content").val();
         noteData.append("<li>" + userContent + "</li>");
     });
+
+    $(".button-done").click(function(){
+
+        if($("#" + notesIndex + " ul").is(':empty')){
+            $("#warning").text("The note is empty");
+            $("#warning").css("display", "block");
+
+        }else{
+            $("#warning").css("display", "none");
+            newNoteSection.css("display", "none");
+            newNoteClick = false;
+
+        }
+    });
 });
