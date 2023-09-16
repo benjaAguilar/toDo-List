@@ -14,7 +14,7 @@ ul{
 
 a{
     text-decoration: none;
-    color: black;
+    color: darkblue;
 }
 
 .logo{
@@ -28,12 +28,18 @@ a{
     gap: 30px;
 }
 
+header{
+    z-index: 3;
+}
+
 .head{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: bisque;
+    background-color: lavender;
+    color: darkblue;
     padding: 20px;
+    box-shadow: 0px 0px 3px #333;
 }
 
 .footer{
@@ -41,9 +47,12 @@ a{
     margin-top: auto;
     justify-content: center;
     align-items: center;
-    background-color: antiquewhite;
+    background-color: lavender;
+    color: darkblue;
     padding: 20px;
     font-weight: bold;
+    box-shadow: 0px 0px 3px #333;
+    z-index: 4;
 }
 
 .content{
@@ -54,8 +63,10 @@ a{
 .sidebar{
     display: flex;
     width: 250px;
-    background-color: antiquewhite;
+    background-color: lavender;
+    box-shadow: 0px 0px 2px #333;
     font-weight: bold;
+    z-index: 2;
 }
 
 .sidebar ul li{
@@ -66,4 +77,37 @@ a{
     padding: 8px;
     margin-top: 15px;
     margin-bottom: 15px;
+    transition: all 300ms;
+}
+
+.sidebar ul li:hover{
+    cursor: pointer;
+    background-color: #ccc;
+    box-shadow: 0px 0px 3px #333;
+}
+
+.notes-section{
+    display: flex;
+    flex: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    z-index: 1;
+}
+
+.note{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: khaki;
+    box-shadow: 0px 0px 2px #333;
+    padding: 20px;
+    width: 150px;
+    height: 200px;
+}
+
+.note-info li{
+    list-style: disc;
+    margin: 5px;
 }
