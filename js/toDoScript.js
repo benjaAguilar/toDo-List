@@ -48,6 +48,8 @@ $(document).ready(function(){
     $("#content-button").click(function(){
         let userContent = $("#note-content").val();
         noteData.append("<li>" + userContent + "</li>");
+
+        $("#note-content").val("");
     });
 
     $(".button-done").click(function(){
@@ -61,6 +63,7 @@ $(document).ready(function(){
             newNoteSection.css("display", "none");
             newNoteClick = false;
 
+            $("#title").val("");
         }
     });
 });
