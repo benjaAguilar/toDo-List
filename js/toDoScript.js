@@ -25,7 +25,9 @@ $(document).ready(function(){
             note.append(noteTitle);
             note.append(noteData);
             note.css("display", "none");
-            note.draggable();
+            note.draggable({
+                containment: "parent"
+            });
 
             $(".notes-section").append(note);
             note.slideDown();
