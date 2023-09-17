@@ -169,6 +169,10 @@ header{
     height: 200px;
 }
 
+.note:hover{
+    cursor: grabbing;
+}
+
 .note-info li{
     list-style: disc;
     margin: 5px;
@@ -178,4 +182,14 @@ header{
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 10px;    
+}
+
+.strike-line{
+    text-decoration: line-through;
+}
+
+.note ul li:hover{
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
 }

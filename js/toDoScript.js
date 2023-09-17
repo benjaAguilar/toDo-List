@@ -100,5 +100,17 @@ $(document).ready(function(){
 
         }
     }
+    
+    //lines striker
+    $(".notes-section").on("click", "li", function(){
+
+        if($(this).hasClass("strike-line")){
+            $(this).removeClass("strike-line");
+
+        } else{
+            $(this).addClass("strike-line");
+
+        }
+    });
 
 });
