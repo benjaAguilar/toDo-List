@@ -100,7 +100,7 @@ $(document).ready(function(){
 
         }
     }
-    
+
     //lines striker
     $(".notes-section").on("click", "li", function(){
 
@@ -113,4 +113,12 @@ $(document).ready(function(){
         }
     });
 
+    //mouse grabbing
+    $(".notes-section").on("mousedown", "div", function(){
+        $(this).css("cursor", "grabbing");
+    });
+
+    $(".notes-section").on("mouseup", "div", function(){
+        $(this).css("cursor", "grab");
+    });
 });

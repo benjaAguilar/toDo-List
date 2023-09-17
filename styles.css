@@ -170,7 +170,7 @@ header{
 }
 
 .note:hover{
-    cursor: grabbing;
+    cursor: grab;
 }
 
 .note-info li{
