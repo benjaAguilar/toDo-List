@@ -37,6 +37,9 @@ $(document).ready(function(){
             newNoteSection.slideUp();
             newNoteClick = false;
 
+            $("#title").val("");
+            $("#note-content").val("");
+
             if($("#" + notesIndex + " ul").is(':empty')){
 
                 $("#" + notesIndex).remove();
