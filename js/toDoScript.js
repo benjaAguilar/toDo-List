@@ -46,28 +46,17 @@ $(document).ready(function(){
         }
     });
 
-    $("#title-button").click(function(){
-        let userTitle = $("#title").val();
-
-        if(userTitle === ""){
-            console.log("input empty");
-
-        }else{
-            noteTitle.text(userTitle);
-
+    $("#title-button").click(setNoteTitle);
+    $("#title").on("keydown", function(e){
+        if(e.which === 13){
+            setNoteTitle();
         }
     });
 
-    $("#content-button").click(function(){
-        let userContent = $("#note-content").val();
-
-        if(userContent === ""){
-            console.log("input empty");
-
-        }else{
-            noteData.append("<li>" + userContent + "</li>");
-            $("#note-content").val("");
-
+    $("#content-button").click(setNoteContent);
+    $("#note-content").on("keypress", function(e){
+        if(e.which === 13){
+            setNoteContent();
         }
     });
 
@@ -85,4 +74,31 @@ $(document).ready(function(){
             $("#title").val("");
         }
     });
+
+    //functions to set the note info
+    function setNoteTitle(){
+        let userTitle = $("#title").val();
+
+        if(userTitle === ""){
+            console.log("input empty");
+
+        }else{
+            noteTitle.text(userTitle);
+
+        }
+    }
+
+    function setNoteContent(){
+        let userContent = $("#note-content").val();
+
+        if(userContent === ""){
+            console.log("input empty");
+
+        }else{
+            noteData.append("<li>" + userContent + "</li>");
+            $("#note-content").val("");
+
+        }
+    }
+
 });
